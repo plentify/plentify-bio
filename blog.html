@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog | Plentify</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky" aria-hidden="true"><i class="c c1"></i><i class="c c2"></i><i class="c c3"></i><span class="st" style="left:8%;top:14%;--d:0s">✦</span><span class="st" style="left:86%;top:10%;--d:-1s">✦</span><span class="st" style="left:72%;top:42%;--d:-2s">✦</span><span class="st" style="left:14%;top:58%;--d:-.6s">✦</span><span class="st" style="left:92%;top:76%;--d:-1.7s">✦</span><span class="st" style="left:40%;top:88%;--d:-2.6s">✦</span></div>
+<div class="wrap">
+<nav aria-label="Main"><a href="index.html">Bio</a><a href="blog.html" aria-current="page">Blog</a></nav>
+<main>
+<section class="card sec">
+<h2>Blog</h2>
+<div id="posts" aria-live="polite"><p class="empty">Loading posts…</p></div>
+</section>
+<section class="card sec clock" id="clock" aria-label="My Clock">
+<h2>My Clock</h2>
+<div id="clockbody">
+<div class="clk"><div><span>My time</span><b id="ck-me">&hellip;</b></div><div><span>Your time</span><b id="ck-you">&hellip;</b></div></div>
+<p id="ck-diff"></p>
+<p id="ck-stat" class="stat"></p>
+</div>
+</section>
+</main>
+<footer>Every post carries a signature the page checks before showing it.</footer>
+</div>
+<script src="blog.js"></script>
+<script src="clock.js"></script>
+</body>
+</html>

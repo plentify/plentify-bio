@@ -1,0 +1,52 @@
+:root{--ink:#12343a;--pink:#ff8fc8;--teal:#39c5bb;--soft:#3f6a70}
+*{box-sizing:border-box}
+body{margin:0;font:1.05rem/1.65 Quicksand,"Segoe UI",system-ui,sans-serif;color:var(--ink);min-height:100vh;
+background:url(assets/wallpaper.png) center/cover fixed,linear-gradient(180deg,#c6f4f1 0%,#86e0dc 45%,#39c5bb 100%)}
+a{color:#0b6b66;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+.sky{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.c{position:absolute;left:0;right:0;height:200px;background-repeat:repeat-x;opacity:.8}
+.c1{top:5%;--w:900px;background-size:900px 200px;background-image:radial-gradient(ellipse 120px 36px at 130px 100px,#fff,transparent 72%),radial-gradient(ellipse 80px 30px at 210px 80px,#fff,transparent 72%),radial-gradient(ellipse 150px 42px at 600px 110px,#fff,transparent 72%),radial-gradient(ellipse 90px 30px at 690px 88px,#fff,transparent 72%)}
+.c2{top:36%;--w:1300px;opacity:.55;background-size:1300px 200px;background-image:radial-gradient(ellipse 170px 46px at 300px 100px,#fff,transparent 72%),radial-gradient(ellipse 110px 34px at 410px 78px,#fff,transparent 72%),radial-gradient(ellipse 140px 40px at 950px 120px,#fff,transparent 72%)}
+.c3{top:68%;--w:1100px;opacity:.6;background-size:1100px 200px;background-image:radial-gradient(ellipse 160px 44px at 180px 110px,#fff,transparent 72%),radial-gradient(ellipse 100px 32px at 270px 88px,#fff,transparent 72%),radial-gradient(ellipse 130px 38px at 800px 100px,#fff,transparent 72%)}
+.st{position:absolute;color:#fff;text-shadow:0 0 10px #fff;font-size:1.2rem;opacity:.85}
+@media (prefers-reduced-motion:no-preference){
+.c{animation:drift linear infinite}.c1{animation-duration:150s}.c2{animation-duration:230s}.c3{animation-duration:190s}
+.st{animation:tw 3.2s ease-in-out infinite;animation-delay:var(--d)}}
+@keyframes drift{to{background-position:calc(-1*var(--w)) 0}}
+@keyframes tw{50%{opacity:.15;transform:scale(.6)}}
+.wrap{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:1.25rem 1rem 4rem}
+nav{display:flex;gap:1.25rem;justify-content:flex-end;padding:.25rem 0 1rem;font-weight:700}
+nav a{color:var(--ink);text-decoration:none;padding-bottom:2px}
+nav a[aria-current]{border-bottom:3px solid var(--pink)}
+.card{background:rgba(255,255,255,.72);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.85);border-radius:20px;box-shadow:0 10px 30px rgba(10,80,90,.16);overflow:hidden}
+.banner{height:200px;background:url(assets/banner.jpg) center 35%/cover,linear-gradient(120deg,var(--teal),#bde9ff)}
+.who{padding:0 1.5rem 1.3rem}
+.pfp{width:124px;height:124px;border-radius:50%;border:5px solid #fff;margin-top:-62px;object-fit:cover;display:block;background:var(--teal);box-shadow:0 4px 14px rgba(10,80,90,.25)}
+h1{font-size:clamp(2.4rem,8vw,3.6rem);line-height:1.05;margin:.5rem 0 .3rem;letter-spacing:-.02em}
+.pill{display:inline-block;font-weight:700;font-size:.9rem;background:#ffd6ec;border-radius:99px;padding:0 .8rem}
+h2{margin:0 0 .5rem;font-size:1.45rem}
+.grid{display:grid;gap:1.25rem;margin-top:1.25rem;grid-template-columns:1fr}
+@media (min-width:760px){.grid{grid-template-columns:1.15fr .85fr}}
+.sec{padding:1.3rem 1.5rem}
+.wide{grid-column:1/-1}
+.empty{color:var(--soft);font-style:italic;margin:0}
+details.post{border-top:1px solid rgba(18,52,58,.18);padding:.9rem 0}
+details.post:first-of-type{border-top:0}
+summary{cursor:pointer;font-weight:700;font-size:1.15rem;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";display:inline-block;width:1.4rem;color:#e0559a}
+details[open] summary::before{content:"\2212"}
+time{display:block;color:var(--soft);font-size:.9rem;margin:.2rem 0 .6rem 1.4rem}
+.body{margin-left:1.4rem;max-width:62ch}
+.body p{white-space:pre-line;margin:0 0 .8rem}
+footer{margin-top:2.5rem;text-align:center;font-weight:700}
+@media (max-width:480px){.banner{height:140px}.who,.sec{padding-left:1.1rem;padding-right:1.1rem}}
+.clock{margin-top:1.25rem}
+.clk{display:flex;flex-wrap:wrap;gap:.5rem 2.5rem}
+.clk span{display:block;color:var(--soft);font-size:.9rem;font-weight:700}
+.clk b{display:block;font-size:1.5rem;font-variant-numeric:tabular-nums}
+#clockbody p{margin:.6rem 0 0}
+.stat{display:flex;align-items:center;gap:.5rem;font-weight:700}
+.dot{width:13px;height:13px;border-radius:50%;border:2px solid var(--ink);flex:none}
+.dot.on{background:#2fd27a}.dot.off{background:#b9c4c6}
